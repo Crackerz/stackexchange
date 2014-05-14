@@ -75,7 +75,7 @@ function loadFile(fileName) {
     fileStream.on('data',function(data) {
         fileBuffer += data
         //Each of our XML entities are seperated by a '\n' character
-        temp = fileBuffer.split('\n')
+        var temp = fileBuffer.split('\n')
         //The last XML entity may not be completely read from disk yet, so we
         //will add it back to the fileBuffer for next time
         fileBuffer = temp.pop()
@@ -107,7 +107,7 @@ function loadFile(fileName) {
 }
 
 function startWorker(data,callback) {
-    worker = workerQueue.pop()
+    var worker = workerQueue.pop()
     console.log("Sending "+data.length+" to "+worker.id)
     //The worker is responsible for cleaning itself up and adding itself back to
     //the workerQueue. We assume each worker will only respond once for each
