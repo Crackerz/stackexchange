@@ -1,0 +1,36 @@
+{
+  "name": "timestamp",
+  "version": "0.0.0",
+  "description": "Visualize stuff and things",
+  "main": "vis.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Crackerz/stackexchange.git"
+  },
+  "keywords": [
+    "data-visualization",
+    "stackexchange",
+    "d3.js"
+  ],
+  "author": "William J. Blankenship",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Crackerz/stackexchange/issues"
+  },
+  "homepage": "https://github.com/Crackerz/stackexchange",
+  "dependencies": {
+    "nodewebkit": "~0.8.6-2"
+  },
+  "scripts": {
+    "start": "nodewebkit"
+  },
+  "main" : "index.html",
+  "window" : {
+    "toolbar" : false,
+    "height" : 600,
+    "width" : 800
+  }
+}
