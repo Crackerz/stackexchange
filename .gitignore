@@ -1,2 +1,3 @@
 # Ignore all massive xml files in directory
 *.xml
+node_modules/
