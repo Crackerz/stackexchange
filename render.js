@@ -1,8 +1,9 @@
 var fs = require('fs')
 fs.readFile('hours.json',bindData)
 
-var width  = 800,
-    height = 600
+var margin = {top: 20, right: 30, bottom: 30, left: 40},
+    width  = 800-margin.right-margin.left,
+    height = 600-margin.top-margin.bottom
 
 var output = document.getElementById("output")
 
@@ -20,12 +21,13 @@ function bindData(err, json) {
     range.push(data[key])
   })
 
+
       min = d3.min(range) - 30000000,
       max = d3.max(range) + 70000000
 
-  var chart = d3.select(".chart")
-                .attr("width",width)
-                .attr("height",height),
+      chart = d3.select(".chart")
+                .attr("width",margin.left+width+margin.right)
+                .attr("height",margin.top+height+margin.bottom)
 
       barWidth = width / domain.length,
 
@@ -33,7 +35,7 @@ function bindData(err, json) {
               .data(domain)
             .enter().append("g")
               .attr("transform", function(d,i) {
-                return "translate("+((i*barWidth)+1)+",40)"
+                return "translate("+(margin.left+((i*barWidth)+1))+","+margin.top+")"
               })
 
   bar.append("rect")
