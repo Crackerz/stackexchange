@@ -25,7 +25,7 @@
     "nodewebkit": "~0.8.6-2"
   },
   "scripts": {
-    "start": "nodewebkit"
+    "start": "nodewebkit --remote-debugging-port=8080"
   },
   "main" : "index.html",
   "window" : {
