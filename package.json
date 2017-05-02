@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/Crackerz/stackexchange",
   "dependencies": {
-    "nodewebkit": "~0.8.6-2"
+    "nodewebkit": "~0.11.6"
   },
   "scripts": {
     "start": "nodewebkit --remote-debugging-port=8080"
